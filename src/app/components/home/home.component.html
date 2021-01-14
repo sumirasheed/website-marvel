@@ -1,0 +1,72 @@
+<div class="banner">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div class="banner__slider" ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <div class="banner__image">
+                <img [src]="slide.image" alt="slide_1">
+                <div class="container">
+                    <div class="banner__content">
+                        <div class="banner__title">
+                            <h1 class="primary_title">{{slide.title}}</h1>
+                        </div>
+                        <div class="banner__desc">
+                            <p class="primary_desc">{{slide.desc}}</p>
+                        </div>
+                        <button type="button" class="btn btn-primary primary_btn">contact</button>
+                        <div>
+                            <video width="320" height="240" controls>
+                                <source src="https://youtu.be/tgbNymZ7vqY" type="video/mp4">
+                                <source src="https://youtu.be/tgbNymZ7vqY" type="video/ogg">
+                              </video>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+           
+        </div>
+    </ngx-slick-carousel>
+</div>
+<div class="banner__search">
+    <div class="container">
+      
+        <div class="row banner__search-container">
+            <div class="col-md-9 banner__search-bar">
+                <form>
+                    <input type="text" class="form-control" placeholder="Search">
+                </form>
+            </div>
+            <div class="col-md-3 banner__slide-arrows">
+                
+                <div class="slide-arrow">
+                    <div class="left-arrow">
+                        <!-- <mat-icon svgIcon="Arrow-left"></mat-icon> -->
+                        <img src="../../../assets/images/arrow-l.png" alt="left-arrow">
+                    </div>
+                    <p class="banner__slide-text">vitarum nobis</p>
+                    <div class="right-arrow">
+                        <img src="../../../assets/images/arrow-r.png" alt="right-arrow">
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="portfolio">
+        <div class="portfolio__title">
+            <h1 class="secondary_title">Quae quo sunt excelsiores Dant clariora </h1>
+        </div>
+        <div class="portfolio__content">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-3" *ngFor="let image of images" >
+                    <div class="portfolio__image" style='background-image:url({{image.image}})'>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

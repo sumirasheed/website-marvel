@@ -1,0 +1,34 @@
+@import '../../../assets/scss/_mixins.scss';
+@import '../../../assets/scss/_variables.scss';
+
+.top-nav{
+    @include flexbox();
+    justify-content: space-between;
+    align-items:center;
+    
+    a{
+        font-weight: bold;
+        font-size: 16px;
+        text-transform:uppercase;
+        letter-spacing: 6px;
+        margin-bottom: 0;
+        color:$white;
+        &:hover{
+            color:#EF7060;
+        }
+    }
+    .nav-menu{
+        span{
+            display:block;
+            width: 36px;
+            height: 3px;
+            background: $white;
+            cursor:pointer;
+            &:first-child{
+                margin-bottom:4px;
+            }
+        }
+        
+    }
+}
+

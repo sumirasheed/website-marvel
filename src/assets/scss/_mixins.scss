@@ -1,0 +1,80 @@
+// box-sizing
+// ------------------------------
+@mixin box-sizing($type: border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing: $type;
+	box-sizing: $type;
+}
+
+// opacity
+// ------------------------------
+@mixin opacity($opacity: 0.5) {
+	opacity: $opacity;
+	filter: alpha(opacity=($opacity * 100));
+}
+
+// border-radius
+// ------------------------------
+@mixin border-radius($value: 3px) {
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	border-radius: $value;
+}
+
+// font-size
+// ------------------------------
+@mixin font-size ($size) {
+	font-size: $size;
+	font-size: ($size / 16px) * 1rem;
+}
+
+// box-shadow
+// ------------------------------
+@mixin box-shadow( $h: 10px , $v: 10px , $b: 0px , $s: 0px , $c: #000000 ) {
+	-webkit-box-shadow: $h $v $b $s $c;
+	-moz-box-shadow: $h $v $b $s $c;
+	box-shadow: $h $v $b $s $c;
+}
+
+// vertical-align
+// ------------------------------
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+// flexbox
+// ------------------------------
+@mixin flexbox {
+	display:-webkit-box;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:-webkit-flex; 
+	display:flex; 
+}
+
+// Placeholder
+// ------------------------------
+@mixin placeholder {
+	&.placeholder { @content }
+	&:-moz-placeholder { @content }
+	&::-webkit-input-placeholder { @content }
+  }
+  
+
+// break-point
+// ------------------------------
+@mixin break-point($point) {
+	@if $point == desktop {
+ 		@media only screen and (max-width:50em) {
+ 			@content;
+ 		}
+	}  @else if $point == mobile {
+ 		@media only screen and (max-width:20em) {
+ 			@content;
+ 		}
+ 	}
+}
